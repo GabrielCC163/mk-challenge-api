@@ -5,3 +5,4 @@ data
 tests/database.sqlite
 tests/coverage/
 src/uploads/*
+!src/uploads/.gitkeep

@@ -8,7 +8,7 @@
 
 ### Run the commands below only on first startup
 
-<i>It will create the database tables and insert the default user</i>
+<i>This will create the database tables and insert the default user</i>
 
 ```
 docker-compose up -d db
