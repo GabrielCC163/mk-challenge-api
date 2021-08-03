@@ -14,7 +14,7 @@ describe('Authentication', () => {
       password: '123123',
     });
 
-    const response = await request(app).post('/sessions').send({
+    const response = await request(app).post('/login').send({
       email: user.email,
       password: '123123',
     });
@@ -27,7 +27,7 @@ describe('Authentication', () => {
       password: '123123',
     });
 
-    const response = await request(app).post('/sessions').send({
+    const response = await request(app).post('/login').send({
       email: user.email,
       password: '123456',
     });
@@ -40,7 +40,7 @@ describe('Authentication', () => {
       password: '123123',
     });
 
-    const response = await request(app).post('/sessions').send({
+    const response = await request(app).post('/login').send({
       email: user.email,
       password: '123123',
     });
@@ -54,21 +54,21 @@ describe('Authentication', () => {
     });
 
     const response = await request(app)
-      .get('/dashboard')
+      .get('/')
       .set('Authorization', `Bearer ${user.generateToken()}`);
 
     expect(response.status).toBe(200);
   });
 
   it('should not be able to access private routes without jwt token', async () => {
-    const response = await request(app).get('/dashboard');
+    const response = await request(app).get('/');
 
     expect(response.status).toBe(401);
   });
 
   it('should not be able to access private routes with invalid jwt token', async () => {
     const response = await request(app)
-      .get('/dashboard')
+      .get('/')
       .set('Authorization', `Bearer 123123`);
 
     expect(response.status).toBe(401);

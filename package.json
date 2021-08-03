@@ -1,5 +1,5 @@
 {
-  "name": "authtdd",
+  "name": "mkapi",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "jest": "^24.1.0",
     "nodemon": "^1.18.10",
     "sequelize-cli": "^5.4.0",
-    "sqlite3": "^4.0.6",
+    "sqlite3": "^5.0.2",
     "supertest": "^3.4.2"
   }
 }

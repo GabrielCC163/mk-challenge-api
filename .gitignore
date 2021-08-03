@@ -4,3 +4,4 @@ data
 
 tests/database.sqlite
 tests/coverage/
+src/uploads/*
